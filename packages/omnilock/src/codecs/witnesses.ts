@@ -4,16 +4,38 @@ import {
   option,
   table,
   vector,
+  union,
+  struct,
 } from "@ckb-lumos/codec/lib/molecule";
 import {
   BytesOpt,
   createFixedHexBytesCodec,
+  Byte32Vec,
+  Byte32,
 } from "@ckb-lumos/codec/lib/blockchain";
 import { bytify, hexify } from "@ckb-lumos/codec/lib/bytes";
 
 const Hexify = { pack: bytify, unpack: hexify };
 
 const Identity = createFixedHexBytesCodec(21);
+
+const RCRule = struct(
+  {
+    smt_root: Byte32,
+    flags: byteOf(Hexify),
+  },
+  ["smt_root", "flags"]
+);
+
+const RCCellVec = Byte32Vec;
+
+export const RCData = union(
+  {
+    RCRule,
+    RCCellVec,
+  },
+  ["RCRule", "RCCellVec"]
+);
 
 const SmtProof = byteVecOf(Hexify);
 

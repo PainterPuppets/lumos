@@ -6,7 +6,25 @@ import { TransactionSkeletonType } from "@ckb-lumos/helpers";
 
 export type LockLike = Script | Address;
 
-export type AuthBy<T extends AuthType, C> = {
+export const SMT_PROOF_MASK = {
+  INPUT: 0x01,
+  OUTPUT: 0x02,
+  BOTH: 0x03,
+};
+export type SmtProofMask = keyof typeof SMT_PROOF_MASK;
+
+type SmtProof = {
+  mask: SmtProofMask;
+  proof: HexString;
+};
+
+export type AdminisratorAuthType = "ADMINISTRATOR";
+
+export type AuthByType = AuthType | AdminisratorAuthType;
+
+export type Identity = HexString; // Todo: replace to codecs
+
+export type AuthBy<T extends AuthByType, C> = {
   authFlag: T;
   options: C;
 };
@@ -28,6 +46,16 @@ export type AuthByMultiSig = AuthBy<
     M: number;
     /** blake160 hashes of compressed public keys */
     publicKeyHashes: Hash[];
+  }
+>;
+
+export type AuthByAdministrator = AuthBy<
+  "ADMINISTRATOR",
+  {
+    identity: Identity;
+    proofs: Array<SmtProof>;
+    rcCell: LockLike;
+    config: ScriptConfig;
   }
 >;
 
@@ -53,7 +81,8 @@ export type AuthPart =
   | AuthByMultiSig
   | AuthByP2SH
   | AuthByDynamicLinking
-  | AuthByExec;
+  | AuthByExec
+  | AuthByAdministrator;
 
 export type FeaturePart = {
   omnilockFlags: OmnilockFlags;

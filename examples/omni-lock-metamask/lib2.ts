@@ -24,7 +24,7 @@ export const CONFIG = config.createConfig({
 
 config.initializeConfig(CONFIG);
 
-const adapter = createCommonAdapter({ scriptConfig: OMNILOCK_SCRIPT_CONFIG });
+const adapter = createCommonAdapter({ scriptConfig: OMNILOCK_SCRIPT_CONFIG } as any);
 common.registerCustomLockScriptInfos([adapter.adapt()]);
 
 const CKB_RPC_URL = "https://testnet.ckb.dev/rpc";
