@@ -13,12 +13,14 @@ administrator mode有两种解锁办法
 1. 按照auth flag的方法解锁，即witenessArgs中只包含signature的部分
 直接使用其他p2pkh/p2sh/etc…的代码解锁就可以
 
-2. 按照administrator's PKH/SH的方法解锁，即witenessArgs中包含omni_identity的部分
+1. 按照administrator's PKH/SH的方法解锁，即witenessArgs中包含omni_identity的部分
 
 应该在suite中加入AuthByAdministrator，设计大概是这样的
 ```
 export type TypeId = HexString;
-export type Identity = HexString; // replace to codecs
+export type Identity = HexString; // Todo: replace to codecs
+
+// reference: 
 export const SMT_PROOF_MASK = {
   INPUT: 0x01,
   OUTPUT: 0x02,
@@ -36,21 +38,19 @@ export type AuthByAdministrator = AuthBy<
   { 
     identity: Identity,
     proofs: Array<SmtProof>,
-    rcCell: ScriptConfig | TypeId,
+    rcCells: Array<Cell>,
     config: ScriptConfig,
   }
 >;
 
 ```
-pubkeyHash：用于填入witenessArgs中omni_identity部分的identity字段 (identity相关链接)[https://blog.cryptape.com/omnilock-a-universal-lock-that-powers-interoperability-1#heading-administrator-mode:~:text=in%20memory%20layout.-,Omnilock%20Witness,-When%20unlocking%20an]
+identity: 用于填入witenessArgs中omni_identity部分的identity字段 (identity相关链接)[https://blog.cryptape.com/omnilock-a-universal-lock-that-powers-interoperability-1#heading-administrator-mode:~:text=in%20memory%20layout.-,Omnilock%20Witness,-When%20unlocking%20an]
 
-scriptHash：用于填入witenessArgs中omni_identity部分的identity字段 (identity相关链接)[https://blog.cryptape.com/omnilock-a-universal-lock-that-powers-interoperability-1#heading-administrator-mode:~:text=in%20memory%20layout.-,Omnilock%20Witness,-When%20unlocking%20an]
+proofs: 用于填入witenessArgs中omni_identity部分的proofs字段
 
-proofs：用于填入witenessArgs中omni_identity部分的proofs字段
+rcCell: 用作在添加cellDeps，可以填入ScriptConfig或者TypeId，这里是为了寻找到匹配的rcCell,可以通过typeid或者ScriptConfig从链上获取到对应cell，这些cell将放入transaction的cell_deps中
 
-rcCell：用作在添加cellDeps，可以填入ScriptConfig或者TypeId，这里是为了寻找到匹配的rcCell,可以通过typeid或者ScriptConfig从链上获取到对应cell，这些cell将放入transaction的cell_deps中
-
-config：omnilock script的配置
+config: omnilock script的配置
 
 ### 关于这些传参的获取：
 
@@ -58,7 +58,7 @@ pubkeyHash/scriptHash：由解锁用户提供
 
 proofs：由rcCell管理者生成，因为rcCell中只包含smt的root部分，无法反推smt中有什么内容，所以无法生成proof，必须由rcCell的管理者生成
 
-rcCell：由解锁用户提供，当用户想解锁某个omnilock的时候，必然知道该lock的addr/args,可以从中获得rcCell的typid
+rcCell：由解锁用户提供, 当用户想解锁某个omnilock的时候, 必然知道该lock的addr/args, 可以从omnilockArgs中获得rcCell的type script hash
 可以提供一个转换函数方便用户使用：
 ```
 function convertOmnilockAddrToArgs(addr: Address): {
@@ -66,10 +66,9 @@ function convertOmnilockAddrToArgs(addr: Address): {
   omnilockArgs: OmnilockArgs;
 }
 ```
-
-这里需要一个函数，queryRcCells，其实现大概是根据typeid找到对应的cell，查看data判断是不是一个rcCell,如果不是则报错，如果是则判断是rcRuleCell还是rcVecCell, 前者返回该cell，后者递归查询vec中包含的每一个typeid,
+当获取到rcCell的type script hash后，可以反推出对应cell，并根据cell的类型继续递归查找嵌套的cell，最终找出所有依赖的rcCell, 所以这里需要一个函数，queryRcCells，其实现大概是根据typeScriptHash找到对应的cell，查看data判断是不是一个rcCell,如果不是则报错，如果是则判断是rcRuleCell还是rcVecCell, 前者返回该cell，后者递归查询vec中包含的每一个 typeScriptHash,
 ```
-function  queryRcCells(typeid: TypeId): Array<Cells>
+export async function queryRcCells(typeScriptHash: HexString): Array<Cell>;
 ```
 
 
@@ -162,8 +161,8 @@ smt和proof相关的库：https://github.com/Daryl-L/sparse-merkle-tree-ts
  *
  * @param {Array<Identity>} AllIdentities 该cell中所有的Identity
  * @param {Identity} checkIdentity 需要证明的Identity
- * @param {boolean} on 该Identity是否存在于这个cell中
+ * @param {boolean} exists 该Identity是否存在于这个cell中
  */
 
-export function generateSingleProof(AllIdentities: Array<Identity>, checkIdentitites: Array<Identity>, on?: boolean)
+export function generateSingleProof(AllIdentities: Array<Identity>, checkIdentity: Identity, exists?: boolean)
 ```

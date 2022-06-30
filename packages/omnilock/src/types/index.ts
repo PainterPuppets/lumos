@@ -1,10 +1,9 @@
-import { Address, Hash, HexString, Script } from "@ckb-lumos/base";
+import { Hash, HexString, Script } from "@ckb-lumos/base";
 import { ScriptConfig } from "@ckb-lumos/config-manager";
 import { BIish } from "@ckb-lumos/bi";
 import { AuthType, OmnilockArgs, OmnilockFlags } from "../codecs";
 import { TransactionSkeletonType } from "@ckb-lumos/helpers";
-
-export type LockLike = Script | Address;
+import { Cell } from "@ckb-lumos/toolkit";
 
 export const SMT_PROOF_MASK = {
   INPUT: 0x01,
@@ -54,7 +53,7 @@ export type AuthByAdministrator = AuthBy<
   {
     identity: Identity;
     proofs: Array<SmtProof>;
-    rcCell: LockLike;
+    rcCells: Array<Cell>;
     config: ScriptConfig;
   }
 >;
