@@ -1,12 +1,12 @@
-# `@ckb-lumos/transaction-manager`
+# `@painterpuppets-lumos/transaction-manager`
 
 TransactionManager is a tool for manager uncommitted cells, you can `send_transaction` via this tool and get uncommitted outputs by `collector`.
 
 ## Usage
 
 ```javascript
-const TransactionManager = require("@ckb-lumos/transaction-manager");
-const { Indexer } = require("@ckb-lumos/ckb-indexer");
+const TransactionManager = require("@painterpuppets-lumos/transaction-manager");
+const { Indexer } = require("@painterpuppets-lumos/ckb-indexer");
 
 // generate a new `TransactionManager` instance and start.
 const indexer = new Indexer("http://127.0.0.1:8114");

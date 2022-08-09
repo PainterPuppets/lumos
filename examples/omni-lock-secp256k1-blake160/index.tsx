@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { helpers, Script } from "@ckb-lumos/lumos";
-import { key } from '@ckb-lumos/hd';
+import { helpers, Script } from "@painterpuppets-lumos/lumos";
+import { key } from '@painterpuppets-lumos/hd';
 import { ec as EC } from "elliptic";
 import ReactDOM from "react-dom";
 import { capacityOf, CONFIG, buildTransfer, signByPrivateKey, sendTransaction } from "./lib";

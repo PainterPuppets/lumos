@@ -2,24 +2,27 @@ import test from "ava";
 import {
   createCellWithMinimalCapacity,
   createScriptRegistry,
-} from "@ckb-lumos/experiment-tx-assembler";
-import { computeScriptHash } from "@ckb-lumos/base/lib/utils";
-import { HexString } from "@ckb-lumos/base";
+} from "@painterpuppets-lumos/experiment-tx-assembler";
+import { computeScriptHash } from "@painterpuppets-lumos/base/lib/utils";
+import { HexString } from "@painterpuppets-lumos/base";
 import { CKBDebugger, CKBDebuggerDownloader, DataLoader } from "../src";
-import { TransactionSkeleton } from "@ckb-lumos/helpers";
+import { TransactionSkeleton } from "@painterpuppets-lumos/helpers";
 import {
   createTestContext,
   getDefaultConfig,
   mockOutPoint,
 } from "../src/context";
 import { randomBytes } from "crypto";
-import { privateKeyToBlake160, signRecoverable } from "@ckb-lumos/hd/lib/key";
-import { hexify } from "@ckb-lumos/codec/lib/bytes";
+import {
+  privateKeyToBlake160,
+  signRecoverable,
+} from "@painterpuppets-lumos/hd/lib/key";
+import { hexify } from "@painterpuppets-lumos/codec/lib/bytes";
 import {
   createP2PKHMessageGroup,
   parseFromInfo,
-} from "@ckb-lumos/common-scripts";
-import { WitnessArgs } from "@ckb-lumos/codec/lib/blockchain";
+} from "@painterpuppets-lumos/common-scripts";
+import { WitnessArgs } from "@painterpuppets-lumos/codec/lib/blockchain";
 
 const downloader = new CKBDebuggerDownloader();
 const context = createTestContext(getDefaultConfig());

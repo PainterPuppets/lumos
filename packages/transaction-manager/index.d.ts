@@ -5,7 +5,7 @@ import {
   logger,
   Indexer,
   CellCollector,
-} from "@ckb-lumos/base";
+} from "@painterpuppets-lumos/base";
 
 declare class TransactionManager {
   constructor(

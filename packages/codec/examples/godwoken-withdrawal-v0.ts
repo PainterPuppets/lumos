@@ -1,5 +1,5 @@
 import { blockchain, molecule, number } from "../src";
-import { BI } from "@ckb-lumos/bi";
+import { BI } from "@painterpuppets-lumos/bi";
 
 const { struct } = molecule;
 const { Byte32 } = blockchain;

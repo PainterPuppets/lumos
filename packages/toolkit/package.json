@@ -1,5 +1,5 @@
 {
-  "name": "@ckb-lumos/toolkit",
+  "name": "@painterpuppets-lumos/toolkit",
   "version": "0.18.0",
   "description": "JavaScript toolkits used to build dapps for Nervos CKB",
   "main": "lib/index.js",

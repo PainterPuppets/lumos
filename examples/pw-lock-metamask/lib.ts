@@ -1,4 +1,4 @@
-import { BI, Cell, config, core, helpers, Indexer, RPC, toolkit, commons } from "@ckb-lumos/lumos";
+import { BI, Cell, config, core, helpers, Indexer, RPC, toolkit, commons } from "@painterpuppets-lumos/lumos";
 import { default as createKeccak } from "keccak";
 
 export const CONFIG = config.createConfig({

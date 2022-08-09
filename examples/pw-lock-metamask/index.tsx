@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { helpers, Script } from "@ckb-lumos/lumos";
+import { helpers, Script } from "@painterpuppets-lumos/lumos";
 import ReactDOM from "react-dom";
 import { asyncSleep, capacityOf, CONFIG, ethereum, transfer } from "./lib";
 

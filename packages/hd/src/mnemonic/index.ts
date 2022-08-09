@@ -1,6 +1,6 @@
 import crypto from "crypto";
 import wordList from "./word_list";
-import { HexString } from "@ckb-lumos/base";
+import { HexString } from "@painterpuppets-lumos/base";
 
 const RADIX = 2048;
 const PBKDF2_ROUNDS = 2048;

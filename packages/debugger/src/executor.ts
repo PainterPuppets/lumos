@@ -1,7 +1,7 @@
 import { DataLoader, ExecuteResult, Executor } from "./types";
-import { TransactionSkeletonType } from "@ckb-lumos/helpers";
+import { TransactionSkeletonType } from "@painterpuppets-lumos/helpers";
 import { spawnSync } from "child_process";
-import { Hash } from "@ckb-lumos/base";
+import { Hash } from "@painterpuppets-lumos/base";
 import * as fs from "fs";
 import * as os from "os";
 import * as path from "path";

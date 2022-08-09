@@ -2,7 +2,7 @@ import test from "ava";
 import { blockchain, molecule, number } from "../src";
 import { randomBytes } from "crypto";
 import { concat, hexify } from "../src/bytes";
-import { BI } from "@ckb-lumos/bi";
+import { BI } from "@painterpuppets-lumos/bi";
 
 const { struct } = molecule;
 const { Uint32 } = number;

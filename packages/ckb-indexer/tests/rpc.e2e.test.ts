@@ -1,4 +1,4 @@
-import { Tip } from "@ckb-lumos/base";
+import { Tip } from "@painterpuppets-lumos/base";
 import test from "ava";
 import { RPC } from "../src";
 const indexUri = "http://127.0.0.1:8120";

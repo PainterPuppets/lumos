@@ -19,7 +19,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@ckb-lumos/lumos": "*",
+    "@painterpuppets-lumos/lumos": "*",
     "@docusaurus/core": "2.0.0-rc.1",
     "@docusaurus/preset-classic": "2.0.0-rc.1",
     "@emotion/react": "^11.9.3",

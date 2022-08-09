@@ -1,11 +1,11 @@
-# `@ckb-lumos/rpc`
+# `@painterpuppets-lumos/rpc`
 
 RPC module for lumos. Provide type definitions for CKB RPC interface.
 
 ## Usage
 
 ```javascript
-import { RPC } from "@ckb-lumos/rpc"
+import { RPC } from "@painterpuppets-lumos/rpc"
 const rpc = new RPC("http://localhost:8114");
 await rpc.get_tip_header();
 

@@ -1,4 +1,4 @@
-# @ckb-lumos/debugger
+# @painterpuppets-lumos/debugger
 
 A [ckb-debugger](https://github.com/nervosnetwork/ckb-standalone-debugger) wrapper for lumos,
 helping you to debug your transaction without lunching a full node
@@ -6,7 +6,7 @@ helping you to debug your transaction without lunching a full node
 ## Quick Start
 
 ```ts
-import { createTestContext } from "@ckb-lumos/debugger";
+import { createTestContext } from "@painterpuppets-lumos/debugger";
 
 const { executor, scriptConfigs } = createTestContext({
   contract1: { path: path.join("path/to/contracts", "contract1") },

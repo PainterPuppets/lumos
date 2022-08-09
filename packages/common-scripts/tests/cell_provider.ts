@@ -1,4 +1,4 @@
-import { Cell, Script, helpers } from "@ckb-lumos/base";
+import { Cell, Script, helpers } from "@painterpuppets-lumos/base";
 const { isCellMatchQueryOptions } = helpers;
 
 interface Options {

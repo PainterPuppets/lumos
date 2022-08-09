@@ -1,6 +1,6 @@
 import Keychain from "./keychain";
 import key, { privateToPublic } from "./key";
-import { utils, HexString } from "@ckb-lumos/base";
+import { utils, HexString } from "@painterpuppets-lumos/base";
 import { assertPublicKey, assertChainCode, assertPrivateKey } from "./helper";
 
 export enum AddressType {
@@ -63,11 +63,11 @@ export class AccountExtendedPublicKey extends ExtendedPublicKey {
     };
   }
 
-  public static pathForReceiving(index: number) {
+  public static pathForReceiving(index: number): string {
     return AccountExtendedPublicKey.pathFor(AddressType.Receiving, index);
   }
 
-  public static pathForChange(index: number) {
+  public static pathForChange(index: number): string {
     return AccountExtendedPublicKey.pathFor(AddressType.Change, index);
   }
 

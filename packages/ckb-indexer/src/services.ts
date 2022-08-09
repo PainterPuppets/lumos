@@ -1,4 +1,9 @@
-import { utils, Script, ScriptWrapper, HexString } from "@ckb-lumos/base";
+import {
+  utils,
+  Script,
+  ScriptWrapper,
+  HexString,
+} from "@painterpuppets-lumos/base";
 import {
   CKBIndexerQueryOptions,
   HexadecimalRange,
@@ -7,7 +12,7 @@ import {
   SearchKey,
 } from "./type";
 import fetch from "cross-fetch";
-import { BI } from "@ckb-lumos/bi";
+import { BI } from "@painterpuppets-lumos/bi";
 
 function instanceOfScriptWrapper(object: unknown): object is ScriptWrapper {
   return typeof object === "object" && object != null && "script" in object;

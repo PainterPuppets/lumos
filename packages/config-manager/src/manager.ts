@@ -1,5 +1,5 @@
 import deepFreeze from "deep-freeze-strict";
-import { logger } from "@ckb-lumos/base";
+import { logger } from "@painterpuppets-lumos/base";
 import { Config } from "./types";
 import { predefined } from "./predefined";
 

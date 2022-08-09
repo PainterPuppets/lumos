@@ -1,5 +1,5 @@
 import test from "ava";
-import { Cell } from "@ckb-lumos/base";
+import { Cell } from "@painterpuppets-lumos/base";
 import { minimalCellCapacity } from "../src";
 
 const normalCell: Cell = {

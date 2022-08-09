@@ -1,4 +1,4 @@
-import { config } from "@ckb-lumos/lumos";
+import { config } from "@painterpuppets-lumos/lumos";
 
 const TESTNET_SCRIPTS: config.ScriptConfigs = {
   ...config.predefined.AGGRON4.SCRIPTS,

@@ -12,8 +12,8 @@ import {
   WitnessArgs,
   toolkit,
   BI,
-} from "@ckb-lumos/lumos";
-import { values } from "@ckb-lumos/base";
+} from "@painterpuppets-lumos/lumos";
+import { values } from "@painterpuppets-lumos/base";
 const { ScriptValue } = values;
 
 export const { AGGRON4 } = config.predefined;

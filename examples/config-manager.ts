@@ -1,4 +1,4 @@
-import { config, helpers } from "@ckb-lumos/lumos";
+import { config, helpers } from "@painterpuppets-lumos/lumos";
 
 const script = {
   code_hash: config.predefined.AGGRON4.SCRIPTS.SECP256K1_BLAKE160.CODE_HASH,

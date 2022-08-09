@@ -1,10 +1,10 @@
-# @ckb-lumos/config-manager
+# @painterpuppets-lumos/config-manager
 
 ## Example
 
 ```ts
-import { initializeConfig, predefined } from '@ckb-lumos/config';
-import { generateAddress } from '@ckb-lumos/helper'
+import { initializeConfig, predefined } from '@painterpuppets-lumos/config';
+import { generateAddress } from '@painterpuppets-lumos/helper'
 
 initializeConfig(predefined.AGGRON);
 generateAddress({...}) // ckt1...

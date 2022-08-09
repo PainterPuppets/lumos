@@ -1,4 +1,4 @@
-# `@ckb-lumos/hd-cache`
+# `@painterpuppets-lumos/hd-cache`
 
 HD Cache manager for lumos.
 
@@ -10,8 +10,8 @@ const {
   CellCollector,
   CellCollectorWithQueryOptions,
   getBalance,
-} = require("@ckb-lumos/hd-cache");
-const { Indexer } = require("@ckb-lumos/ckb-indexer");
+} = require("@painterpuppets-lumos/hd-cache");
+const { Indexer } = require("@painterpuppets-lumos/ckb-indexer");
 const indexer = new Indexer("http://localhost:8114");
 const cacheManger = CacheManager.loadFromKeystore(
   indexer,

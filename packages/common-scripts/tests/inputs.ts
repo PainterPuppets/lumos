@@ -1,4 +1,4 @@
-import { Cell, Header } from "@ckb-lumos/base";
+import { Cell, Header } from "@painterpuppets-lumos/base";
 import { LocktimeCell } from "../src";
 
 export const bobSecpInputs: Cell[] = [

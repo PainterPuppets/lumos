@@ -1,14 +1,14 @@
-import { Header, OutPoint } from "@ckb-lumos/base";
+import { Header, OutPoint } from "@painterpuppets-lumos/base";
 import * as crypto from "crypto";
-import { ScriptConfig } from "@ckb-lumos/config-manager";
+import { ScriptConfig } from "@painterpuppets-lumos/config-manager";
 import { OutputDataLoader } from "./loader";
 import { DataLoader, TestContext } from "./types";
 import { CKBDebuggerDownloader } from "./download";
 import { CKBDebugger } from "./executor";
 import * as fs from "fs";
 import * as path from "path";
-import { hexify } from "@ckb-lumos/codec/lib/bytes";
-import { Uint32 } from "@ckb-lumos/codec/lib/number";
+import { hexify } from "@painterpuppets-lumos/codec/lib/bytes";
+import { Uint32 } from "@painterpuppets-lumos/codec/lib/number";
 
 export function mockOutPoint(): OutPoint {
   return {

@@ -1,5 +1,5 @@
-const { BI } = require("@ckb-lumos/bi");
-const { Reader } = require("@ckb-lumos/toolkit");
+const { BI } = require("@painterpuppets-lumos/bi");
+const { Reader } = require("@painterpuppets-lumos/toolkit");
 
 function DenormalizeOutPoint(outPoint) {
   return {

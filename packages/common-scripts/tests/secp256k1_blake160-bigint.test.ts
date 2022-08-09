@@ -3,9 +3,9 @@ import { CellProvider } from "./cell_provider";
 import {
   TransactionSkeleton,
   TransactionSkeletonType,
-} from "@ckb-lumos/helpers";
+} from "@painterpuppets-lumos/helpers";
 import { secp256k1Blake160 } from "../src";
-import { predefined } from "@ckb-lumos/config-manager";
+import { predefined } from "@painterpuppets-lumos/config-manager";
 const { LINA } = predefined;
 import { bob, alice, fullAddressInfo } from "./account_info";
 import { inputs } from "./secp256k1_blake160_inputs";
