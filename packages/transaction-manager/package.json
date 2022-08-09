@@ -1,6 +1,6 @@
 {
   "name": "@painterpuppets-lumos/transaction-manager",
-  "version": "0.18.0",
+  "version": "0.18.1-next.0",
   "description": "Pending Transaction Manager for lumos",
   "author": "Xuejie Xiao <xxuejie@gmail.com>",
   "homepage": "https://github.com/nervosnetwork/lumos#readme",
@@ -31,9 +31,9 @@
     "url": "https://github.com/nervosnetwork/lumos/issues"
   },
   "dependencies": {
-    "@painterpuppets-lumos/base": "0.18.0",
-    "@painterpuppets-lumos/ckb-indexer": "0.18.0",
-    "@painterpuppets-lumos/toolkit": "0.18.0",
+    "@painterpuppets-lumos/base": "^0.18.1-next.0",
+    "@painterpuppets-lumos/ckb-indexer": "^0.18.1-next.0",
+    "@painterpuppets-lumos/toolkit": "^0.18.1-next.0",
     "immutable": "^4.0.0-rc.12"
   },
   "publishConfig": {
