@@ -3,7 +3,14 @@ on:
   # When Release Pull Request is merged
   push:
     branches:
-      - develop
+      - 'v[0-9]+.[0-9]+.[0-9]+*'
+      # - v[0-9]+.[0-9]+.[0-9]+-alpha.[0-9]+
+      # - v[0-9]+.[0-9]+.[0-9]+-rc.[0-9]+
+      # - v[0-9]+.[0-9]+.[0-9]+-beta.[0-9]+
+      - 'next/v[0-9]+.[0-9]+.[0-9]+*'
+      # - next/v[0-9]+.[0-9]+.[0-9]+-alpha.[0-9]+
+      # - next/v[0-9]+.[0-9]+.[0-9]+-rc.[0-9]+
+      # - next/v[0-9]+.[0-9]+.[0-9]+-beta.[0-9]+
 
 permissions:
   contents: write # for checkout and tag

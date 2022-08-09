@@ -1,6 +1,6 @@
 {
   "name": "@painterpuppets-lumos/experiment-tx-assembler",
-  "version": "0.18.0",
+  "version": "0.18.1-next.0",
   "description": "",
   "homepage": "https://github.com/nervosnetwork/lumos#readme",
   "license": "MIT",
@@ -21,10 +21,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@painterpuppets-lumos/base": "0.18.0",
-    "@painterpuppets-lumos/config-manager": "0.18.0",
-    "@painterpuppets-lumos/helpers": "0.18.0",
-    "@painterpuppets-lumos/toolkit": "0.18.0"
+    "@painterpuppets-lumos/base": "^0.18.1-next.0",
+    "@painterpuppets-lumos/config-manager": "^0.18.1-next.0",
+    "@painterpuppets-lumos/helpers": "^0.18.1-next.0",
+    "@painterpuppets-lumos/toolkit": "^0.18.1-next.0"
   },
   "repository": {
     "type": "git",
