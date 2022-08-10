@@ -1,4 +1,4 @@
-import { createCKBMockRPC, mockData } from "@ckb-lumos/testkit";
+import { createCKBMockRPC, mockData } from "@painterpuppets-lumos/testkit";
 import fs from "fs";
 import path from "path";
 

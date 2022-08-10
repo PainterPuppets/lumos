@@ -2,8 +2,8 @@ import test from "ava";
 import { serializeMultisigScript, multisigArgs } from "../src/from_info";
 import { bob } from "./account_info";
 import { parseFromInfo } from "../src";
-import { predefined } from "@ckb-lumos/config-manager";
-import { parseAddress } from "@ckb-lumos/helpers";
+import { predefined } from "@painterpuppets-lumos/config-manager";
+import { parseAddress } from "@painterpuppets-lumos/helpers";
 const { AGGRON4 } = predefined;
 
 // from https://github.com/nervosnetwork/rfcs/blob/v2020.01.15/rfcs/0021-ckb-address-format/0021-ckb-address-format.md

@@ -1,10 +1,10 @@
-import { Cell, core, utils, Hash, Script } from "@ckb-lumos/base";
+import { Cell, core, utils, Hash, Script } from "@painterpuppets-lumos/base";
 import {
   TransactionSkeletonType,
   createTransactionFromSkeleton,
-} from "@ckb-lumos/helpers";
-import { Reader, normalizers } from "@ckb-lumos/toolkit";
-import { BI } from "@ckb-lumos/bi";
+} from "@painterpuppets-lumos/helpers";
+import { Reader, normalizers } from "@painterpuppets-lumos/toolkit";
+import { BI } from "@painterpuppets-lumos/bi";
 
 function groupInputs(inputs: Cell[], locks: Script[]): Map<string, number[]> {
   const lockSet = new Set<string>();

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import { Script } from "@ckb-lumos/lumos";
+import { Script } from "@painterpuppets-lumos/lumos";
 import { capacityOf, generateAccountFromPrivateKey, transfer } from "./lib";
 
 const app = document.getElementById("root");

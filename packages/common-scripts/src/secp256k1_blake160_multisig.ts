@@ -3,7 +3,7 @@ import {
   TransactionSkeletonType,
   Options,
   minimalCellCapacityCompatible,
-} from "@ckb-lumos/helpers";
+} from "@painterpuppets-lumos/helpers";
 import {
   core,
   values,
@@ -17,10 +17,10 @@ import {
   CellProvider,
   QueryOptions,
   PackedSince,
-} from "@ckb-lumos/base";
-import { getConfig, Config } from "@ckb-lumos/config-manager";
+} from "@painterpuppets-lumos/base";
+import { getConfig, Config } from "@painterpuppets-lumos/config-manager";
 const { ScriptValue } = values;
-import { normalizers, Reader } from "@ckb-lumos/toolkit";
+import { normalizers, Reader } from "@painterpuppets-lumos/toolkit";
 import { Set } from "immutable";
 import {
   addCellDep,
@@ -36,7 +36,7 @@ import {
   serializeMultisigScript,
   multisigArgs,
 } from "./from_info";
-import { BI, BIish } from "@ckb-lumos/bi";
+import { BI, BIish } from "@painterpuppets-lumos/bi";
 import { CellCollectorConstructor } from "./type";
 
 export { serializeMultisigScript, multisigArgs };

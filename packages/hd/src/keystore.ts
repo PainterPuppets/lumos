@@ -5,7 +5,7 @@ import fs from "fs";
 import Path from "path";
 
 import { ExtendedPrivateKey } from "./extended_key";
-import { HexString } from "@ckb-lumos/base";
+import { HexString } from "@painterpuppets-lumos/base";
 
 export type HexStringWithoutPrefix = string;
 

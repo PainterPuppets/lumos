@@ -1,5 +1,5 @@
 const test = require("ava");
-const { BI } = require("@ckb-lumos/bi");
+const { BI } = require("@painterpuppets-lumos/bi");
 
 const { since, utils } = require("../lib");
 

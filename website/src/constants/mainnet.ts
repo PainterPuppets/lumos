@@ -1,4 +1,4 @@
-import { config } from "@ckb-lumos/lumos";
+import { config } from "@painterpuppets-lumos/lumos";
 
 export const MAINNET_SCRIPTS: config.ScriptConfigs = {
   ...config.predefined.LINA.SCRIPTS,

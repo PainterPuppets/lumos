@@ -8,7 +8,7 @@ import {
   Header,
   CellCollector as CellCollectorInterface,
   values,
-} from "@ckb-lumos/base";
+} from "@painterpuppets-lumos/base";
 const { toBigUInt128LE, computeScriptHash } = utils;
 import secp256k1Blake160Multisig from "./secp256k1_blake160_multisig";
 import { FromInfo, parseFromInfo } from "./from_info";
@@ -18,17 +18,17 @@ import {
   TransactionSkeletonType,
   Options,
   minimalCellCapacityCompatible,
-} from "@ckb-lumos/helpers";
+} from "@painterpuppets-lumos/helpers";
 import { Set, List } from "immutable";
-import { getConfig, Config } from "@ckb-lumos/config-manager";
+import { getConfig, Config } from "@painterpuppets-lumos/config-manager";
 import { CellCollector as LocktimeCellCollector } from "./locktime_pool";
 import anyoneCanPay, {
   CellCollector as AnyoneCanPayCellCollector,
 } from "./anyone_can_pay";
 const { ScriptValue } = values;
 import secp256k1Blake160 from "./secp256k1_blake160";
-import { readBigUInt128LECompatible } from "@ckb-lumos/base/lib/utils";
-import { BI, BIish } from "@ckb-lumos/bi";
+import { readBigUInt128LECompatible } from "@painterpuppets-lumos/base/lib/utils";
+import { BI, BIish } from "@painterpuppets-lumos/bi";
 
 export type Token = Hash;
 

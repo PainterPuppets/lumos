@@ -1,13 +1,13 @@
-# `@ckb-lumos/helpers`
+# `@painterpuppets-lumos/helpers`
 
 Helper utilities for working with CKB transactions from lumos.
 
-The difference between this and `@ckb-lumos/base`, is that `@ckb-lumos/base` contains only core definitions, while this module contains utilities used in a framework sense. One example is: you can pretty much use `@ckb-lumos/base` as a standalone library, while this library integrates more with `config` module so it knows whether the framework is running under testnet, or mainnet environment.
+The difference between this and `@painterpuppets-lumos/base`, is that `@painterpuppets-lumos/base` contains only core definitions, while this module contains utilities used in a framework sense. One example is: you can pretty much use `@painterpuppets-lumos/base` as a standalone library, while this library integrates more with `config` module so it knows whether the framework is running under testnet, or mainnet environment.
 
 ## Usage
 
 ```javascript
-const { minimalCellCapacity, generateAddress, parseAddress } = require("@ckb-lumos/helpers")
+const { minimalCellCapacity, generateAddress, parseAddress } = require("@painterpuppets-lumos/helpers")
 
 // Get cell minimal capacity.
 const result = minimalCellCapacity({
@@ -38,7 +38,7 @@ const address = generateAddress({
 })
 
 // Then you will get mainnet address "ckb1qyqrdsefa43s6m882pcj53m4gdnj4k440axqdt9rtd", or you can generate testnet address by
-const { predefined } = require("@ckb-lumos/config-manager")
+const { predefined } = require("@painterpuppets-lumos/config-manager")
 
 const address = generateAddress({
   code_hash:

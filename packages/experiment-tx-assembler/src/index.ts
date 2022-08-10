@@ -6,11 +6,14 @@ import {
   Hash,
   HexNumber,
   Cell,
-} from "@ckb-lumos/base";
-import { BI, BIish } from "@ckb-lumos/bi";
-import { minimalCellCapacity } from "@ckb-lumos/helpers";
-import { ScriptConfig, ScriptConfigs } from "@ckb-lumos/config-manager";
-import { Reader } from "@ckb-lumos/toolkit";
+} from "@painterpuppets-lumos/base";
+import { BI, BIish } from "@painterpuppets-lumos/bi";
+import { minimalCellCapacity } from "@painterpuppets-lumos/helpers";
+import {
+  ScriptConfig,
+  ScriptConfigs,
+} from "@painterpuppets-lumos/config-manager";
+import { Reader } from "@painterpuppets-lumos/toolkit";
 
 interface ScriptRegistry<T extends ScriptConfigs> {
   extend: <T1 extends ScriptConfigs>(newPayload: T1) => ScriptRegistry<T & T1>;

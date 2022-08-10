@@ -1,11 +1,11 @@
-# @ckb-lumos/bi
+# @painterpuppets-lumos/bi
 
 A big number library for lumos.
 
 ## Example
 
 ```ts
-import { BI } from "@ckb-lumos/bi";
+import { BI } from "@painterpuppets-lumos/bi";
 
 BI.from(1).add(1)
 ```

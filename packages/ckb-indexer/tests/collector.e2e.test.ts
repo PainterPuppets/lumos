@@ -6,7 +6,7 @@ const {
   cellCollectorTestCases,
   queryWithBlockHash,
 } = require("./test_cases.js");
-import { HashType } from "@ckb-lumos/base";
+import { HashType } from "@painterpuppets-lumos/base";
 import { OtherQueryOptions } from "../src/type";
 
 const nodeUri = "http://127.0.0.1:8118/rpc";

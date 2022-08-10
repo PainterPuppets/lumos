@@ -10,5 +10,5 @@ Lumos is a collection of libraries that allow developers to build CKB-based dApp
 ## Quick Start
 
 ```
-yarn add @ckb-lumos/lumos
+yarn add @painterpuppets-lumos/lumos
 ```

@@ -1,4 +1,4 @@
-import { BI, BIish } from "@ckb-lumos/bi";
+import { BI, BIish } from "@painterpuppets-lumos/bi";
 import { createFixedBytesCodec, FixedBytesCodec } from "../base";
 
 function assertNumberRange(value: BIish, min: BIish, max: BIish): void {

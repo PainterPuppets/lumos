@@ -3,7 +3,7 @@ import {
   createTransactionFromSkeleton,
   parseAddress,
   TransactionSkeletonType,
-} from "@ckb-lumos/helpers";
+} from "@painterpuppets-lumos/helpers";
 import {
   core,
   values,
@@ -12,11 +12,11 @@ import {
   Script,
   Address,
   HexString,
-} from "@ckb-lumos/base";
+} from "@painterpuppets-lumos/base";
 const { CKBHasher, ckbHash } = utils;
-import { normalizers, Reader } from "@ckb-lumos/toolkit";
-import { Config } from "@ckb-lumos/config-manager";
-import { BI } from "@ckb-lumos/bi";
+import { normalizers, Reader } from "@painterpuppets-lumos/toolkit";
+import { Config } from "@painterpuppets-lumos/config-manager";
+import { BI } from "@painterpuppets-lumos/bi";
 
 export function addCellDep(
   txSkeleton: TransactionSkeletonType,

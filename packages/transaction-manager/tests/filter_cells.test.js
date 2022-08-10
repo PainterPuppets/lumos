@@ -1,6 +1,6 @@
 const test = require("ava");
 const TransactionManager = require("../lib");
-const { utils } = require("@ckb-lumos/base");
+const { utils } = require("@painterpuppets-lumos/base");
 
 const cells = [
   {

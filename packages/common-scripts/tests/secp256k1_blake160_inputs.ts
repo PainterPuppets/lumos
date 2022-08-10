@@ -1,4 +1,4 @@
-import { Cell } from "@ckb-lumos/base";
+import { Cell } from "@painterpuppets-lumos/base";
 
 export const inputs = (): Cell[] => [
   {

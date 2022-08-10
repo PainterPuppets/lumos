@@ -1,13 +1,13 @@
 import test from "ava";
 import { addressToScript, parseAddress } from "../src";
-import { predefined } from "@ckb-lumos/config-manager";
+import { predefined } from "@painterpuppets-lumos/config-manager";
 import { bech32, bech32m } from "bech32";
 import {
   ADDRESS_FORMAT_FULL,
   ADDRESS_FORMAT_FULLDATA,
 } from "../src/address-to-script";
 import { hexToByteArray } from "../src/utils";
-import { Address } from "@ckb-lumos/base";
+import { Address } from "@painterpuppets-lumos/base";
 
 const LINA = predefined.LINA;
 const AGGRON = predefined.AGGRON4;

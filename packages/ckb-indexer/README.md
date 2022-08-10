@@ -8,7 +8,7 @@ CKB indexer is based on  [ckb-indexer](https://github.com/nervosnetwork/ckb-ind
 ### **Indexer**
 
 ```jsx
-const { Indexer } = require("@ckb-lumos/ckb-indexer");
+const { Indexer } = require("@painterpuppets-lumos/ckb-indexer");
 const nodeUri = "https://testnet.ckb.dev/rpc";
 const indexUri = "https://testnet.ckb.dev/indexer";
 const indexer = new Indexer(indexUri, nodeUri);

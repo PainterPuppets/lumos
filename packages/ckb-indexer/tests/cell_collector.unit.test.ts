@@ -1,8 +1,8 @@
 import test from "ava";
 import { Indexer, CellCollector } from "../src";
-import { HexadecimalRange, Script, utils } from "@ckb-lumos/base";
+import { HexadecimalRange, Script, utils } from "@painterpuppets-lumos/base";
 import sinon, { SinonSpy } from "sinon";
-import { validators } from "@ckb-lumos/toolkit";
+import { validators } from "@painterpuppets-lumos/toolkit";
 
 const nodeUri = "http://127.0.0.1:8118/rpc";
 const indexUri = "http://127.0.0.1:8120";

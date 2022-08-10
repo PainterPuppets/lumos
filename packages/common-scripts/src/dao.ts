@@ -4,7 +4,7 @@ import {
   Options,
   generateAddress,
   minimalCellCapacityCompatible,
-} from "@ckb-lumos/helpers";
+} from "@painterpuppets-lumos/helpers";
 import {
   core,
   utils,
@@ -17,11 +17,11 @@ import {
   PackedDao,
   PackedSince,
   CellCollector as CellCollectorInterface,
-} from "@ckb-lumos/base";
-import { getConfig, Config } from "@ckb-lumos/config-manager";
+} from "@painterpuppets-lumos/base";
+import { getConfig, Config } from "@painterpuppets-lumos/config-manager";
 const { toBigUInt64LE, readBigUInt64LE } = utils;
 const { parseSince } = sinceUtils;
-import { normalizers, Reader } from "@ckb-lumos/toolkit";
+import { normalizers, Reader } from "@painterpuppets-lumos/toolkit";
 import secp256k1Blake160 from "./secp256k1_blake160";
 import secp256k1Blake160Multisig from "./secp256k1_blake160_multisig";
 import { FromInfo, parseFromInfo } from "./from_info";
@@ -31,9 +31,9 @@ import {
   isSecp256k1Blake160MultisigScript,
   generateDaoScript,
 } from "./helper";
-import { RPC } from "@ckb-lumos/rpc";
-import { readBigUInt64LECompatible } from "@ckb-lumos/base/lib/utils";
-import { BI, BIish } from "@ckb-lumos/bi";
+import { RPC } from "@painterpuppets-lumos/rpc";
+import { readBigUInt64LECompatible } from "@painterpuppets-lumos/base/lib/utils";
+import { BI, BIish } from "@painterpuppets-lumos/bi";
 
 const DEPOSIT_DAO_DATA: HexString = "0x0000000000000000";
 const DAO_LOCK_PERIOD_EPOCHS_COMPATIBLE = BI.from(180);

@@ -3,7 +3,7 @@ import {
   Options,
   TransactionSkeletonType,
   minimalCellCapacityCompatible,
-} from "@ckb-lumos/helpers";
+} from "@painterpuppets-lumos/helpers";
 import { FromInfo, parseFromInfo } from "./from_info";
 import secp256k1Blake160 from "./secp256k1_blake160";
 import {
@@ -26,10 +26,10 @@ import {
   QueryOptions,
   CellCollector as CellCollectorType,
   SinceValidationInfo,
-} from "@ckb-lumos/base";
+} from "@painterpuppets-lumos/base";
 const { toBigUInt64LE, readBigUInt64LECompatible, readBigUInt64LE } = utils;
 const { ScriptValue } = values;
-import { normalizers, Reader } from "@ckb-lumos/toolkit";
+import { normalizers, Reader } from "@painterpuppets-lumos/toolkit";
 import {
   generateDaoScript,
   isSecp256k1Blake160MultisigScript,
@@ -45,11 +45,11 @@ const {
   validateSince,
 } = sinceUtils;
 import { List, Set } from "immutable";
-import { getConfig, Config } from "@ckb-lumos/config-manager";
-import { RPC } from "@ckb-lumos/rpc";
+import { getConfig, Config } from "@painterpuppets-lumos/config-manager";
+import { RPC } from "@painterpuppets-lumos/rpc";
 import { secp256k1Blake160Multisig } from ".";
-import { parseSinceCompatible } from "@ckb-lumos/base/lib/since";
-import { BI, BIish } from "@ckb-lumos/bi";
+import { parseSinceCompatible } from "@painterpuppets-lumos/base/lib/since";
+import { BI, BIish } from "@painterpuppets-lumos/bi";
 import { CellCollectorConstructor } from "./type";
 
 export interface LocktimeCell extends Cell {

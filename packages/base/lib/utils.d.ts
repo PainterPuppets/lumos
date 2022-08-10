@@ -1,6 +1,6 @@
-import { Reader } from "@ckb-lumos/toolkit";
+import { Reader } from "@painterpuppets-lumos/toolkit";
 import { HexNumber } from "..";
-import { BI, BIish } from "@ckb-lumos/bi";
+import { BI, BIish } from "@painterpuppets-lumos/bi";
 import { Script, Input } from "./api";
 import { Hash, HexString } from "./primitive";
 

@@ -6,10 +6,10 @@ import { CellProvider } from "./cell_provider";
 import {
   TransactionSkeleton,
   TransactionSkeletonType,
-} from "@ckb-lumos/helpers";
-import { Cell } from "@ckb-lumos/base";
+} from "@painterpuppets-lumos/helpers";
+import { Cell } from "@painterpuppets-lumos/base";
 import { FromInfo } from "../src";
-import { predefined } from "@ckb-lumos/config-manager";
+import { predefined } from "@painterpuppets-lumos/config-manager";
 const { AGGRON4 } = predefined;
 
 const aliceInput: Cell = {

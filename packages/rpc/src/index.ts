@@ -1,4 +1,4 @@
-import { RPC as ToolkitRPC } from "@ckb-lumos/toolkit";
+import { RPC as ToolkitRPC } from "@painterpuppets-lumos/toolkit";
 import {
   Alert,
   BannedAddr,
@@ -25,8 +25,8 @@ import {
   TxPoolIds,
   TxPoolInfo,
   TxPoolVerbosity,
-} from "@ckb-lumos/base";
-import { BI } from "@ckb-lumos/bi";
+} from "@painterpuppets-lumos/base";
+import { BI } from "@painterpuppets-lumos/bi";
 
 export type SerializedBlock = HexString;
 export type SerializedHeader = HexString;

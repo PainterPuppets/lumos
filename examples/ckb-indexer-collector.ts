@@ -1,6 +1,6 @@
 // This example shows how to use the CkbIndexer to collect cells
 
-import { Script, Indexer as CkbIndexer, helpers, config, BI } from "@ckb-lumos/lumos";
+import { Script, Indexer as CkbIndexer, helpers, config, BI } from "@painterpuppets-lumos/lumos";
 
 config.initializeConfig(config.predefined.AGGRON4);
 

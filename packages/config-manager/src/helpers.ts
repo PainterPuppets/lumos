@@ -1,4 +1,4 @@
-import { Script } from "@ckb-lumos/base";
+import { Script } from "@painterpuppets-lumos/base";
 import { ScriptConfig, ScriptConfigs } from "./types";
 import { getConfig } from "./manager";
 

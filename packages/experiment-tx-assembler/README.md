@@ -1,4 +1,4 @@
-# `@ckb-lumos/experiment-tx-assembler`
+# `@painterpuppets-lumos/experiment-tx-assembler`
 
 This package provides functions to simplify the transaction assembling process.
 
@@ -7,8 +7,8 @@ This package provides functions to simplify the transaction assembling process.
 `createScriptRegistry` is for creating and managing script more easier.
 
 ```ts
-import { createScriptRegistry } from "@ckb-lumos/experiment";
-import { predefined } from "@ckb-lumos/config-manager";
+import { createScriptRegistry } from "@painterpuppets-lumos/experiment";
+import { predefined } from "@painterpuppets-lumos/config-manager";
 const { AGGRON4 } = predefined;
 const registry = createScriptRegistry(AGGRON4.SCRIPTS);
 const secp256k1Script = registry.newScript("SECP256K1_BLAKE160", "0x");

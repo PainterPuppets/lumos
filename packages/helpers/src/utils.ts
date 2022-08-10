@@ -1,4 +1,4 @@
-import { HexString } from "@ckb-lumos/base";
+import { HexString } from "@painterpuppets-lumos/base";
 
 export function hexToByteArray(h: HexString): number[] {
   if (!/^(0x)?([0-9a-fA-F][0-9a-fA-F])*$/.test(h)) {
