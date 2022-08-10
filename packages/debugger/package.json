@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@painterpuppets-lumos/debugger",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "description": "ckb-standard-debugger wrapper for lumos, check tx without launching a full node",
   "author": "",
   "homepage": "https://github.com/nervosnetwork/lumos#readme",
@@ -21,11 +21,11 @@
     "contracts"
   ],
   "dependencies": {
-    "@painterpuppets-lumos/base": "*",
-    "@painterpuppets-lumos/bi": "*",
-    "@painterpuppets-lumos/codec": "*",
-    "@painterpuppets-lumos/config-manager": "*",
-    "@painterpuppets-lumos/helpers": "*",
+    "@painterpuppets-lumos/base": "^0.19.0",
+    "@painterpuppets-lumos/bi": "^0.19.0",
+    "@painterpuppets-lumos/codec": "^0.19.0",
+    "@painterpuppets-lumos/config-manager": "^0.19.0",
+    "@painterpuppets-lumos/helpers": "^0.19.0",
     "@types/download": "^8.0.1",
     "@types/object-hash": "^2.2.1",
     "debug": "^4.3.4",
@@ -34,7 +34,7 @@
     "object-hash": "^3.0.0"
   },
   "devDependencies": {
-    "@painterpuppets-lumos/experiment-tx-assembler": "*"
+    "@painterpuppets-lumos/experiment-tx-assembler": "^0.19.0"
   },
   "bin": {
     "download-ckb-debugger": "bin/download-ckb-debugger.js"
