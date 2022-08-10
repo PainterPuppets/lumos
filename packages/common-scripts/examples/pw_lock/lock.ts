@@ -13,14 +13,14 @@ import {
   core,
   utils,
   CellDep,
-} from "@ckb-lumos/base";
+} from "@painterpuppets-lumos/base";
 import {
   Options,
   TransactionSkeletonType,
   createTransactionFromSkeleton,
-} from "@ckb-lumos/helpers";
-import { getConfig, Config, initializeConfig } from "@ckb-lumos/config-manager";
-import { Reader, normalizers } from "@ckb-lumos/toolkit";
+} from "@painterpuppets-lumos/helpers";
+import { getConfig, Config, initializeConfig } from "@painterpuppets-lumos/config-manager";
+import { Reader, normalizers } from "@painterpuppets-lumos/toolkit";
 import { Set } from "immutable";
 import keccak, { Keccak } from "keccak";
 

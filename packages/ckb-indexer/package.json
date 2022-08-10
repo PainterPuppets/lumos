@@ -1,5 +1,5 @@
 {
-  "name": "@ckb-lumos/ckb-indexer",
+  "name": "@painterpuppets-lumos/ckb-indexer",
   "version": "0.18.0",
   "description": "CKB Indexer",
   "author": "Xuejie Xiao <xxuejie@gmail.com>",
@@ -19,15 +19,15 @@
     "src"
   ],
   "dependencies": {
-    "@ckb-lumos/base": "0.18.0",
-    "@ckb-lumos/bi": "0.18.0",
-    "@ckb-lumos/rpc": "0.18.0",
-    "@ckb-lumos/toolkit": "0.18.0",
+    "@painterpuppets-lumos/base": "0.18.0",
+    "@painterpuppets-lumos/bi": "0.18.0",
+    "@painterpuppets-lumos/rpc": "0.18.0",
+    "@painterpuppets-lumos/toolkit": "0.18.0",
     "cross-fetch": "^3.1.5",
     "events": "^3.3.0"
   },
   "devDependencies": {
-    "@ckb-lumos/testkit": "0.18.0",
+    "@painterpuppets-lumos/testkit": "0.18.0",
     "@types/request": "^2.48.8",
     "@types/sinon": "^10.0.6",
     "find-process": "^1.4.7",

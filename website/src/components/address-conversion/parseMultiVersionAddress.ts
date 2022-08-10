@@ -1,4 +1,4 @@
-import { config as lumosConfig, helpers, Script } from "@ckb-lumos/lumos";
+import { config as lumosConfig, helpers, Script } from "@painterpuppets-lumos/lumos";
 import { Err, MultiVersionAddress } from "@site/src/types";
 
 export type ParseResult = MultiVersionAddress | Err;

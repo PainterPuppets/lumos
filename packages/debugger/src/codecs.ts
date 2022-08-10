@@ -1,8 +1,8 @@
-import { struct, vector } from "@ckb-lumos/codec/lib/molecule";
-import { Byte32 } from "@ckb-lumos/codec/lib/blockchain";
-import { createFixedBytesCodec } from "@ckb-lumos/codec";
-import { Uint32 } from "@ckb-lumos/codec/lib/number";
-import { BI } from "@ckb-lumos/bi";
+import { struct, vector } from "@painterpuppets-lumos/codec/lib/molecule";
+import { Byte32 } from "@painterpuppets-lumos/codec/lib/blockchain";
+import { createFixedBytesCodec } from "@painterpuppets-lumos/codec";
+import { Uint32 } from "@painterpuppets-lumos/codec/lib/number";
+import { BI } from "@painterpuppets-lumos/bi";
 
 export const OutPoint = struct(
   {

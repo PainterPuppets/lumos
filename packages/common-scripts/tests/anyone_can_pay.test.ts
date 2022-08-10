@@ -5,14 +5,14 @@ import {
   TransactionSkeletonType,
   TransactionSkeleton,
   minimalCellCapacityCompatible,
-} from "@ckb-lumos/helpers";
-import { predefined } from "@ckb-lumos/config-manager";
+} from "@painterpuppets-lumos/helpers";
+import { predefined } from "@painterpuppets-lumos/config-manager";
 import { bob, alice } from "./account_info";
 import { bobAcpCells, aliceAcpCells } from "./inputs";
-import { Cell, values } from "@ckb-lumos/base";
+import { Cell, values } from "@painterpuppets-lumos/base";
 const { AGGRON4 } = predefined;
 import { checkLimit } from "../src/anyone_can_pay";
-import { BI } from "@ckb-lumos/bi";
+import { BI } from "@painterpuppets-lumos/bi";
 test.before(() => {
   // @ts-ignore: Unreachable code error
   BigInt = () => {

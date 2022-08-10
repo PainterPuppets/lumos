@@ -1,6 +1,6 @@
 import test from "ava";
-import { Script, utils } from "@ckb-lumos/base";
-import { Reader } from "@ckb-lumos/toolkit";
+import { Script, utils } from "@painterpuppets-lumos/base";
+import { Reader } from "@painterpuppets-lumos/toolkit";
 import { default as createKeccak } from "keccak";
 import { createP2PKHMessageGroup } from "../src/p2pkh";
 import { txObject, txSkeletonFromJson } from "./helper";

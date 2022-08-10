@@ -5,10 +5,10 @@ import {
   TransactionSkeletonType,
   TransactionSkeleton,
   parseAddress,
-} from "@ckb-lumos/helpers";
+} from "@painterpuppets-lumos/helpers";
 import { bob, alice } from "./account_info";
-import { predefined } from "@ckb-lumos/config-manager";
-import { Script, utils } from "@ckb-lumos/base";
+import { predefined } from "@painterpuppets-lumos/config-manager";
+import { Script, utils } from "@painterpuppets-lumos/base";
 import { isSudtScript } from "../src/helper";
 import {
   bobSecpInputs,
@@ -18,8 +18,8 @@ import {
   bobAcpSudtInputs,
   aliceAcpSudtInputs,
 } from "./inputs";
-import { readBigUInt128LECompatible } from "@ckb-lumos/base/lib/utils";
-import { BI } from "@ckb-lumos/bi";
+import { readBigUInt128LECompatible } from "@painterpuppets-lumos/base/lib/utils";
+import { BI } from "@painterpuppets-lumos/bi";
 const { AGGRON4 } = predefined;
 
 test.before(() => {

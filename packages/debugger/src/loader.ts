@@ -1,7 +1,7 @@
-import { HexString, OutPoint } from "@ckb-lumos/base";
+import { HexString, OutPoint } from "@painterpuppets-lumos/base";
 import * as fs from "fs";
-import { ckbHash } from "@ckb-lumos/base/lib/utils";
-import { hexify } from "@ckb-lumos/codec/lib/bytes";
+import { ckbHash } from "@painterpuppets-lumos/base/lib/utils";
+import { hexify } from "@painterpuppets-lumos/codec/lib/bytes";
 import { OutPoint as OutPointCodec, OutPointVec } from "./codecs";
 
 export type LoadedCode = { codeHash: HexString; binary: HexString };

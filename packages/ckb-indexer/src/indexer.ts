@@ -8,9 +8,9 @@ import {
   Output,
   utils,
   Block,
-} from "@ckb-lumos/base";
-import { validators } from "@ckb-lumos/toolkit";
-import { RPC } from "@ckb-lumos/rpc";
+} from "@painterpuppets-lumos/base";
+import { validators } from "@painterpuppets-lumos/toolkit";
+import { RPC } from "@painterpuppets-lumos/rpc";
 import { request, requestBatch } from "./services";
 import { CKBCellCollector } from "./collector";
 import { EventEmitter } from "events";
@@ -28,7 +28,7 @@ import {
   Terminator,
   OtherQueryOptions,
 } from "./type";
-import { BI } from "@ckb-lumos/bi";
+import { BI } from "@painterpuppets-lumos/bi";
 
 const DefaultTerminator: Terminator = () => {
   return { stop: false, push: true };

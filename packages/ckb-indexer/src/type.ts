@@ -8,9 +8,9 @@ import {
   HexNumber,
   Output,
   TransactionWithStatus,
-} from "@ckb-lumos/base";
+} from "@painterpuppets-lumos/base";
 import { EventEmitter } from "events";
-import { BIish } from "@ckb-lumos/bi";
+import { BIish } from "@painterpuppets-lumos/bi";
 
 export type ScriptType = "type" | "lock";
 export type Order = "asc" | "desc";

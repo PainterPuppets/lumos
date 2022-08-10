@@ -5,9 +5,9 @@ import {
   QueryOptions,
   Script,
   Header,
-} from "@ckb-lumos/base";
-import { Options } from "@ckb-lumos/helpers";
-import { RPC } from "@ckb-lumos/rpc";
+} from "@painterpuppets-lumos/base";
+import { Options } from "@painterpuppets-lumos/helpers";
+import { RPC } from "@painterpuppets-lumos/rpc";
 import { FromInfo } from "./from_info";
 
 export interface CellCollectorConstructor {

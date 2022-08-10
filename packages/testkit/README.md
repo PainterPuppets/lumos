@@ -1,4 +1,4 @@
-# `@ckb-lumos/base`
+# `@painterpuppets-lumos/base`
 
 Test toolkit for testing CKB dApps
 

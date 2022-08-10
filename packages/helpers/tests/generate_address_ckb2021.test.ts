@@ -1,7 +1,7 @@
 import test from "ava";
 import { encodeToAddress } from "../src";
-import { Config, predefined } from "@ckb-lumos/config-manager";
-import { HashType, Script } from "@ckb-lumos/base";
+import { Config, predefined } from "@painterpuppets-lumos/config-manager";
+import { HashType, Script } from "@painterpuppets-lumos/base";
 
 const LINA = predefined.LINA;
 const AGGRON4 = predefined.AGGRON4;

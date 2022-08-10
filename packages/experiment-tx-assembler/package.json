@@ -1,5 +1,5 @@
 {
-  "name": "@ckb-lumos/experiment-tx-assembler",
+  "name": "@painterpuppets-lumos/experiment-tx-assembler",
   "version": "0.18.0",
   "description": "",
   "homepage": "https://github.com/nervosnetwork/lumos#readme",
@@ -21,10 +21,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@ckb-lumos/base": "0.18.0",
-    "@ckb-lumos/config-manager": "0.18.0",
-    "@ckb-lumos/helpers": "0.18.0",
-    "@ckb-lumos/toolkit": "0.18.0"
+    "@painterpuppets-lumos/base": "0.18.0",
+    "@painterpuppets-lumos/config-manager": "0.18.0",
+    "@painterpuppets-lumos/helpers": "0.18.0",
+    "@painterpuppets-lumos/toolkit": "0.18.0"
   },
   "repository": {
     "type": "git",

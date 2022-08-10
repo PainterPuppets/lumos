@@ -4,15 +4,15 @@ import {
   parseAddress,
   TransactionSkeleton,
   TransactionSkeletonType,
-} from "@ckb-lumos/helpers";
+} from "@painterpuppets-lumos/helpers";
 import { secp256k1Blake160 } from "../src";
-import { predefined } from "@ckb-lumos/config-manager";
+import { predefined } from "@painterpuppets-lumos/config-manager";
 const { LINA, AGGRON4 } = predefined;
 import { bob, alice, fullAddressInfo } from "./account_info";
 import { inputs } from "./secp256k1_blake160_inputs";
-import { Cell, values } from "@ckb-lumos/base";
+import { Cell, values } from "@painterpuppets-lumos/base";
 import { bobSecpInputs } from "./inputs";
-import { BI } from "@ckb-lumos/bi";
+import { BI } from "@painterpuppets-lumos/bi";
 
 const cellProvider = new CellProvider(inputs());
 let txSkeleton: TransactionSkeletonType = TransactionSkeleton({ cellProvider });

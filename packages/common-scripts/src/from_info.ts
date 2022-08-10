@@ -5,10 +5,10 @@ import {
   Script,
   HexString,
   utils,
-} from "@ckb-lumos/base";
-import { Options, parseAddress } from "@ckb-lumos/helpers";
-import { getConfig } from "@ckb-lumos/config-manager";
-import { BI } from "@ckb-lumos/bi";
+} from "@painterpuppets-lumos/base";
+import { Options, parseAddress } from "@painterpuppets-lumos/helpers";
+import { getConfig } from "@painterpuppets-lumos/config-manager";
+import { BI } from "@painterpuppets-lumos/bi";
 
 const { CKBHasher, toBigUInt64LE } = utils;
 

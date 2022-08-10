@@ -1,4 +1,4 @@
-import { Script } from "@ckb-lumos/lumos";
+import { Script } from "@painterpuppets-lumos/lumos";
 
 export type Err = { error: string };
 

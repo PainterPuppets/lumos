@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { Box, Divider, TextField } from "@mui/material";
-import { helpers, Script } from "@ckb-lumos/lumos";
+import { helpers, Script } from "@painterpuppets-lumos/lumos";
 import {
   parseMultiVersionAddress,
   ParseResult,

@@ -1,6 +1,6 @@
 import test from "ava";
 import { dao } from "../src";
-import { Cell } from "@ckb-lumos/base";
+import { Cell } from "@painterpuppets-lumos/base";
 
 const calculateMaximumWithdrawInfo = {
   depositInput: {

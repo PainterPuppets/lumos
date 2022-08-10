@@ -1,9 +1,9 @@
 import {
   TransactionSkeletonType,
   TransactionSkeleton,
-} from "@ckb-lumos/helpers";
-import { Cell, CellDep, core } from "@ckb-lumos/base";
-import { Reader, normalizers } from "@ckb-lumos/toolkit";
+} from "@painterpuppets-lumos/helpers";
+import { Cell, CellDep, core } from "@painterpuppets-lumos/base";
+import { Reader, normalizers } from "@painterpuppets-lumos/toolkit";
 
 export interface txObject {
   inputs: Cell[];

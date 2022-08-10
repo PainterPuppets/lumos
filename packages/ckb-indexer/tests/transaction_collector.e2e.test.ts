@@ -6,7 +6,7 @@ const {
   transactionCollectorCollectTestCases,
 } = require("./test_cases.js");
 
-import { QueryOptions } from "@ckb-lumos/base";
+import { QueryOptions } from "@painterpuppets-lumos/base";
 
 const nodeUri = "http://127.0.0.1:8118/rpc";
 const indexUri = "http://127.0.0.1:8120";

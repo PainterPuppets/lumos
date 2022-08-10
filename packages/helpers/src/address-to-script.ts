@@ -6,8 +6,8 @@
 // |  0x02       | full version with hash_type = "Data", deprecated             |
 // |  0x04       | full version with hash_type = "Type", deprecated             |
 
-import { Address, Script } from "@ckb-lumos/base";
-import { getConfig } from "@ckb-lumos/config-manager";
+import { Address, Script } from "@painterpuppets-lumos/base";
+import { getConfig } from "@painterpuppets-lumos/config-manager";
 import { bech32, bech32m } from "bech32";
 import { Options } from "./";
 import { byteArrayToHex } from "./utils";

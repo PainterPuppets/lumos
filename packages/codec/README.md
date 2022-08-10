@@ -1,4 +1,4 @@
-# @ckb-lumos/codec
+# @painterpuppets-lumos/codec
 
 This module provides a set of functions to pack(encode) and unpack(decode) data.
 
@@ -13,7 +13,7 @@ graph TD;
 ## Quick Start
 
 ```ts
-import { struct, Uint8, Uint128 } from "@ckb-lumos/codec";
+import { struct, Uint8, Uint128 } from "@painterpuppets-lumos/codec";
 
 // udt-info.mol
 // struct UDTInfo {
@@ -118,7 +118,7 @@ machine, the number is encoded in little-endian by default.
 - `Uint512(BE|LE)`: `BI` <=> `Uint512`
 
 ```ts
-import { Uint32, Uint128 } from "@ckb-lumos/codec";
+import { Uint32, Uint128 } from "@painterpuppets-lumos/codec";
 
 const packedU32 = Uint32.pack(100); // == Uint8Array([100, 0, 0, 0]) little-endian
 // const packedU32 = Uint32LE.pack(100); // == Uint8Array([100, 0, 0, 0]) little-endian
@@ -146,7 +146,7 @@ Let's see an example of how to implement a `UTF8String` codec. If we want to sto
 then the corresponding molecule structure should be a `vector UTF8String <byte>`
 
 ```ts
-import { byteVecOf } from "@ckb-lumos/codec";
+import { byteVecOf } from "@painterpuppets-lumos/codec";
 import { Buffer } from "buffer"; // https://github.com/feross/buffer
 
 const UTF8String = byteVecOf<string>({
@@ -193,8 +193,8 @@ table OmniLockWitnessLock {
 ### Get Type Definition from Value
 
 ```ts
-import { molecule } from "@ckb-lumos/codec";
-import type { UnpackResult } from "@ckb-lumos/codec";
+import { molecule } from "@painterpuppets-lumos/codec";
+import type { UnpackResult } from "@painterpuppets-lumos/codec";
 
 const { struct } = molecule;
 

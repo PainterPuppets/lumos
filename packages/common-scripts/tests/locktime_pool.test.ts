@@ -3,7 +3,7 @@ import {
   TransactionSkeleton,
   TransactionSkeletonType,
   Options,
-} from "@ckb-lumos/helpers";
+} from "@painterpuppets-lumos/helpers";
 import {
   locktimePool,
   LocktimeCell,
@@ -14,14 +14,14 @@ const { prepareSigningEntries, payFee } = locktimePool;
 import { CellProvider } from "./cell_provider";
 import { List } from "immutable";
 import { DEV_CONFIG } from "./dev_config";
-import { Config, predefined } from "@ckb-lumos/config-manager";
+import { Config, predefined } from "@painterpuppets-lumos/config-manager";
 import {
   Header,
   Cell,
   CellCollector,
   Script,
   since as SinceUtils,
-} from "@ckb-lumos/base";
+} from "@painterpuppets-lumos/base";
 import { parseFromInfo } from "../src/from_info";
 import {
   bobMultisigInputs,
@@ -32,7 +32,7 @@ import {
 import { bob } from "./account_info";
 import { transferCompatible } from "../lib/locktime_pool";
 import { calculateMaximumWithdrawCompatible } from "../lib/dao";
-import { BI } from "@ckb-lumos/bi";
+import { BI } from "@painterpuppets-lumos/bi";
 const { AGGRON4 } = predefined;
 
 const originCapacity = "0x174876e800";

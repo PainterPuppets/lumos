@@ -1,5 +1,5 @@
-import { utils, Cell, BaseCellCollector } from "@ckb-lumos/base";
-import { validators } from "@ckb-lumos/toolkit";
+import { utils, Cell, BaseCellCollector } from "@painterpuppets-lumos/base";
+import { validators } from "@painterpuppets-lumos/toolkit";
 import {
   SearchKeyFilter,
   CKBIndexerQueryOptions,
