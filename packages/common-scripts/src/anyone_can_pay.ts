@@ -36,6 +36,7 @@ import { CellCollectorConstructor, CellCollectorType } from "./type";
 const { ScriptValue } = values;
 const { CKBHasher, ckbHash, readBigUInt128LECompatible } = utils;
 
+// add some text
 export const CellCollector: CellCollectorConstructor = class CellCollector
   implements CellCollectorType {
   private cellCollector: BaseCellCollectorType;
