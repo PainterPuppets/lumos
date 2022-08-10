@@ -90,7 +90,8 @@ jobs:
         run: |
           yarn run build
           yarn run build-release
-          yarn lerna publish from-package --yes --dist-tag $([ steps.prerelease_check.outputs.prerelease == 'true' ] && echo 'next' || echo 'latest')
+          yarn lerna publish from-package --yes --dist-tag $(DIST_TAG)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          DIST_TAG: $([ steps.prerelease_check.outputs.prerelease == 'true' ] && echo 'next' || echo 'latest')
