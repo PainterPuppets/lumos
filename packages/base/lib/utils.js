@@ -1,5 +1,9 @@
 const blake2b = require("blake2b");
-const { validators, normalizers, Reader } = require("@painterpuppets-lumos/toolkit");
+const {
+  validators,
+  normalizers,
+  Reader,
+} = require("@painterpuppets-lumos/toolkit");
 const isEqual = require("lodash.isequal");
 const { SerializeScript, SerializeCellInput } = require("./core");
 const { xxHash32 } = require("js-xxhash");
