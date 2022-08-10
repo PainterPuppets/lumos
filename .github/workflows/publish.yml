@@ -40,11 +40,13 @@ jobs:
       - name: Prerelease Check
         id: prerelease_check
         run: |
-          if [[ ${{ github.event.ref_name }} =~ ^next\/v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
+          if [[ ${REF_NAME} =~ ^next\/v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
               echo ::set-output name=prerelease::true
           else
               echo ::set-output name=prerelease::false
           fi
+        env:
+          REF_NAME: ${{ github.event.ref_name }}
       - name: Tag Check
         id: tag_check
         run: |
@@ -73,14 +75,16 @@ jobs:
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_BODY: ${{ github.event.commits[0].message }}
         with:
           tag_name: v${{ env.CURRENT_VERSION }}
           # Copy Pull Request's tile and body to Release Note
           release_name: ${{ env.CURRENT_VERSION }}
           body: |
-            ${{ github.event.commits[0].message }}
+            ${{ env.RELEASE_BODY }}
           draft: false
           prerelease: steps.tag_check.prerelease_check.prerelease == 'true'
+          
       - name: Publish
         if: steps.tag_check.outputs.exists_tag == 'false'
         run: |
