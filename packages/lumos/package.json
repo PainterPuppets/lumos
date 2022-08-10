@@ -1,6 +1,6 @@
 {
   "name": "@painterpuppets-lumos/lumos",
-  "version": "0.19.0-next.0",
+  "version": "0.19.0",
   "description": "A root package for Lumos",
   "author": "Xuejie Xiao <xxuejie@gmail.com>",
   "homepage": "https://github.com/nervosnetwork/lumos#readme",
@@ -37,15 +37,15 @@
     "url": "https://github.com/nervosnetwork/lumos/issues"
   },
   "dependencies": {
-    "@painterpuppets-lumos/base": "^0.19.0-next.0",
-    "@painterpuppets-lumos/bi": "^0.19.0-next.0",
-    "@painterpuppets-lumos/ckb-indexer": "^0.19.0-next.0",
-    "@painterpuppets-lumos/common-scripts": "^0.19.0-next.0",
-    "@painterpuppets-lumos/config-manager": "^0.19.0-next.0",
-    "@painterpuppets-lumos/hd": "^0.19.0-next.0",
-    "@painterpuppets-lumos/helpers": "^0.19.0-next.0",
-    "@painterpuppets-lumos/rpc": "^0.19.0-next.0",
-    "@painterpuppets-lumos/toolkit": "^0.19.0-next.0"
+    "@painterpuppets-lumos/base": "^0.19.0",
+    "@painterpuppets-lumos/bi": "^0.19.0",
+    "@painterpuppets-lumos/ckb-indexer": "^0.19.0",
+    "@painterpuppets-lumos/common-scripts": "^0.19.0",
+    "@painterpuppets-lumos/config-manager": "^0.19.0",
+    "@painterpuppets-lumos/hd": "^0.19.0",
+    "@painterpuppets-lumos/helpers": "^0.19.0",
+    "@painterpuppets-lumos/rpc": "^0.19.0",
+    "@painterpuppets-lumos/toolkit": "^0.19.0"
   },
   "devDependencies": {
     "buffer": "^6.0.3",

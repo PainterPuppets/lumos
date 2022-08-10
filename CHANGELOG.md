@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.19.0](https://github.com/PainterPuppets/lumos/compare/v0.19.0-next.0...v0.19.0) (2022-08-10)
+
+
+### Features
+
+* update workflow ([fbeb5e9](https://github.com/PainterPuppets/lumos/commit/fbeb5e9f00a58eb642eec3255f499be3cb01d891))
+
+
+
+
+
 # [0.19.0-next.0](https://github.com/PainterPuppets/lumos/compare/v0.18.0...v0.19.0-next.0) (2022-08-10)
 
 
