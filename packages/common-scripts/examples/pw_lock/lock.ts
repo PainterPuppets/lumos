@@ -19,7 +19,11 @@ import {
   TransactionSkeletonType,
   createTransactionFromSkeleton,
 } from "@painterpuppets-lumos/helpers";
-import { getConfig, Config, initializeConfig } from "@painterpuppets-lumos/config-manager";
+import {
+  getConfig,
+  Config,
+  initializeConfig,
+} from "@painterpuppets-lumos/config-manager";
 import { Reader, normalizers } from "@painterpuppets-lumos/toolkit";
 import { Set } from "immutable";
 import keccak, { Keccak } from "keccak";
