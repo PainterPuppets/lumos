@@ -1,6 +1,6 @@
 {
   "name": "@painterpuppets-lumos/hd-cache",
-  "version": "0.19.0",
+  "version": "0.19.1-alpha.0",
   "description": "HD wallet cache in lumos",
   "author": "Xuejie Xiao <xxuejie@gmail.com>",
   "homepage": "https://github.com/nervosnetwork/lumos#readme",
@@ -19,12 +19,12 @@
     "src"
   ],
   "dependencies": {
-    "@painterpuppets-lumos/base": "^0.19.0",
-    "@painterpuppets-lumos/bi": "^0.19.0",
-    "@painterpuppets-lumos/ckb-indexer": "^0.19.0",
-    "@painterpuppets-lumos/config-manager": "^0.19.0",
-    "@painterpuppets-lumos/hd": "^0.19.0",
-    "@painterpuppets-lumos/rpc": "^0.19.0",
+    "@painterpuppets-lumos/base": "^0.19.1-alpha.0",
+    "@painterpuppets-lumos/bi": "^0.19.1-alpha.0",
+    "@painterpuppets-lumos/ckb-indexer": "^0.19.1-alpha.0",
+    "@painterpuppets-lumos/config-manager": "^0.19.1-alpha.0",
+    "@painterpuppets-lumos/hd": "^0.19.1-alpha.0",
+    "@painterpuppets-lumos/rpc": "^0.19.1-alpha.0",
     "immutable": "^4.0.0-rc.12"
   },
   "repository": {
