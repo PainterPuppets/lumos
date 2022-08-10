@@ -78,7 +78,7 @@ jobs:
           # Copy Pull Request's tile and body to Release Note
           release_name: ${{ env.CURRENT_VERSION }}
           body: |
-            ${{ github.event.commits[0][message] }}
+            ${{ github.event.commits[0].message }}
           draft: false
           prerelease: steps.tag_check.prerelease_check.prerelease == 'true'
       - name: Publish
