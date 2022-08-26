@@ -1,6 +1,7 @@
 import { config, Indexer, RPC, hd } from "@ckb-lumos/lumos"
 import { encodeToAddress } from "@ckb-lumos/helpers"
-import { buildSecp256k1Blake160Exchange } from './lib';
+import { makeSecp256k1Blake160Plugin } from './plugins';
+import { SimpleTxBuilder } from './txbuilder';
 
 // ckt
 const CKB_RPC_URL = "https://testnet.ckb.dev/rpc"
@@ -36,30 +37,31 @@ export const generateSECP256K1Account = (privKey: string) => {
   }
 }
 
-const bootstrap = async () => {
+const main = async () => {
   const alice = generateSECP256K1Account("0xd00c06bfd800d27397002dca6fb0993d5ba6399b4238b2f29ee9deb97593d2bc")
   const bob = generateSECP256K1Account("0x63d86723e08f0f813a36ce6aa123bb2289d90680ae1e99d4de8cdb334553f24d")
 
-  let txBuilder = await buildSecp256k1Blake160Exchange({
-    sender: alice.address,
-    amount: (100 * 10 ** 8).toString(16),
-    recipient: bob.address,
-    indexer,
-  })
+  const txBuilder = new SimpleTxBuilder([
+    makeSecp256k1Blake160Plugin({
+      scriptConfig: CONFIG.SCRIPTS['SECP256K1_BLAKE160'],
+      indexer
+    }),
+  ])
 
-  const messages = txBuilder.getMessages()
-  const sigs = messages.map(message => hd.key.signRecoverable(message!, alice.privKey))
+  await txBuilder.pushInput({ address: alice.address, capacity: 1 * 10 ** 8 * 100 });
+  await txBuilder.pushOutput({ address: bob.address, capacity: 1 * 10 ** 8 * 100 });
+  // todo: add payfee case
+  // txBuilder.payFeeByFeeRate({ address: alice.address, rate: 1000 });
 
-  txBuilder = txBuilder.setWitnesses(sigs);
+  const messages = txBuilder.getMessages();
 
-  const tx = txBuilder.getTransaction();
+  const sigs = messages.map(message => hd.key.signRecoverable(message, alice.privKey));
 
-  const hash = await rpc.sendTransaction(tx, "passthrough")
-  console.log("The transaction hash is", hash)
-
+  const tx = txBuilder.seal(sigs);
+  const txHash = await rpc.sendTransaction(tx);
+  console.log(txHash)
 }
 
-bootstrap()
-
+main()
 
 
