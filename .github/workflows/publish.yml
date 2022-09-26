@@ -47,6 +47,12 @@ jobs:
           fi
         env:
           REF_NAME: ${{ github.ref_name }}
+      # - name: 'Get Previous tag'
+      #   id: previoustag
+      #   uses: "actions-ecosystem/action-get-latest-tag@v1"
+      #   with: 
+      #     semver_only: true
+
       - name: Tag Check
         id: tag_check
         run: |
@@ -69,19 +75,28 @@ jobs:
           github_repo: ${{ github.repository }}
           git_commit_sha: ${{ github.sha }}
           git_tag_prefix: "v"
+      # - name: Generate changelog
+      #   uses: slime-hatena/lerna-changelog-action@main
+      #   id: generate-changelog
+      #   with:
+      #     GITHUB_AUTH: '${{ secrets.GITHUB_TOKEN }}'
+      #     label_settings_file_path: './.github/semantic_versioning_label.json'
+      #     tag_from: ${{ steps.previoustag.outputs.tag }}
+      #     tag_to: v${{ env.CURRENT_VERSION }}
       - name: Create Release
         id: create_release
         if: steps.tag_check.outputs.exists_tag == 'false'
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PRERELEASE: ${{ steps.prerelease_check.outputs.prerelease }}
         with:
           tag_name: v${{ env.CURRENT_VERSION }}
-          # Copy Pull Request's tile and body to Release Note
+          # body: steps.generate-changelog.outputs.markdown
+          body_path: './CHANGELOG.md'
           release_name: ${{ env.CURRENT_VERSION }}
-          draft: false
-          prerelease: steps.tag_check.prerelease_check.prerelease == 'true'
-          
+          prerelease: ${{ env.PRERELEASE }}
+
       - name: Publish
         if: steps.tag_check.outputs.exists_tag == 'false'
         run: |
