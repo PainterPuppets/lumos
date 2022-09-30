@@ -1,13 +1,31 @@
-import { Address } from "@ckb-lumos/base";
+import {
+  Address,
+  Script,
+  HexString,
+  TransactionWithStatus,
+} from "@ckb-lumos/base";
+import { BI, BIish } from "@ckb-lumos/bi";
 import { GENESIS_CELL_PRIVATEKEYS } from "./constants";
-import { asyncSleep, transferCKB, waitTransactionCommitted } from "./utils";
+import { asyncSleep } from "./utils";
 import { FaucetQueue, MockFaucetQueue } from "./faucetQueue";
+import { encodeToAddress } from "@ckb-lumos/helpers";
 
+type LockScriptLike = Address | Script;
 interface ClaimTask {
-  claimer: Address;
-  amount: number;
-  cb: (txHash: string) => unknown;
-  error: (error: Error) => unknown;
+  claimer: LockScriptLike;
+  amount: BI;
+  onClaimed: (txHash: string) => unknown;
+  onError: (error: Error) => unknown;
+}
+
+interface CKBOprationProvider {
+  transferCKB(options: {
+    to: Address;
+    fromPk: HexString;
+    amount: BIish;
+  }): Promise<string>;
+
+  waitTransactionCommitted(txHash: string): Promise<TransactionWithStatus>;
 }
 
 export class FaucetProvider {
@@ -17,6 +35,7 @@ export class FaucetProvider {
   private claimQueue: ClaimTask[] = [];
 
   constructor(
+    protected ckbOprationProvider: CKBOprationProvider,
     options: {
       queue?: FaucetQueue;
       genesisCellPks?: Array<string>;
@@ -56,17 +75,22 @@ export class FaucetProvider {
         continue;
       }
 
-      const txHash = await transferCKB({
-        to: next.task.claimer,
-        fromPk: next.privateKey,
-        amount: next.task.amount,
-      }).catch((err) => {
-        next.task.error(err);
-        throw err;
-      });
-      next.task.cb(txHash);
+      const txHash = await this.ckbOprationProvider
+        .transferCKB({
+          to:
+            typeof next.task.claimer === "string"
+              ? next.task.claimer
+              : encodeToAddress(next.task.claimer),
+          fromPk: next.privateKey,
+          amount: next.task.amount,
+        })
+        .catch((err) => {
+          next.task.onError(err);
+          throw err;
+        });
+      next.task.onClaimed(txHash);
 
-      waitTransactionCommitted(txHash).then(() => {
+      this.ckbOprationProvider.waitTransactionCommitted(txHash).then(() => {
         this.queue.releaseKey(next.privateKey);
       });
     }
@@ -76,13 +100,13 @@ export class FaucetProvider {
     this.running = false;
   }
 
-  claimCKB(claimer: Address, amount?: number): Promise<string> {
+  claimCKB(claimer: LockScriptLike, amount?: BI): Promise<string> {
     return new Promise((res, rej) => {
       this.claimQueue.push({
         claimer,
-        amount: amount || 1000,
-        cb: (txHash: string) => res(txHash),
-        error: (error: Error) => rej(error),
+        amount: amount || BI.from(1000 * 10 ** 8),
+        onClaimed: (txHash: string) => res(txHash),
+        onError: (error: Error) => rej(error),
       });
     });
   }
