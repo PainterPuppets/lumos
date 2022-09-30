@@ -1,6 +1,6 @@
 import anyTest, { TestInterface } from "ava";
 import { generateHDAccount, HDAccount } from "../src/utils";
-import { CKB_RPC_URL, INDEXER_RPC_URL } from "../src/constants";
+import { CKB_RPC_URL, BUILTIN_INDEXER_RPC_URL } from "../src/constants";
 import { E2EProvider } from "../src/e2eProvider";
 import { join } from "path";
 import { FaucetProvider } from "../src/faucetProvider";
@@ -9,7 +9,7 @@ import { Cell, Script } from "@ckb-lumos/base";
 import { encodeToAddress } from "@ckb-lumos/helpers";
 import { Config } from "@ckb-lumos/config-manager";
 import { RPC } from "@ckb-lumos/rpc";
-import { Indexer } from "@ckb-lumos/ckb-indexer";
+import { BuiltinIndexer } from "@ckb-lumos/ckb-indexer";
 
 interface TestContext {
   account: HDAccount;
@@ -20,7 +20,7 @@ interface TestContext {
 const test = anyTest as TestInterface<TestContext>;
 
 const rpc = new RPC(CKB_RPC_URL);
-const indexer = new Indexer(INDEXER_RPC_URL, CKB_RPC_URL);
+const indexer = new BuiltinIndexer(BUILTIN_INDEXER_RPC_URL, CKB_RPC_URL);
 const e2eProvider = new E2EProvider({ indexer, rpc });
 
 test.before(async (t) => {

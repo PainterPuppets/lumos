@@ -13,7 +13,7 @@ import {
 } from "./paramsFormatter";
 
 export class RPC {
-  private uri: string;
+  protected uri: string;
 
   /**
    *
@@ -56,7 +56,7 @@ export class RPC {
 }
 
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types */
-const request = async (
+export const request = async (
   ckbIndexerUrl: string,
   method: string,
   params?: any

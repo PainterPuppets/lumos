@@ -55,7 +55,8 @@ export class CkbIndexer implements Indexer {
   private getCkbRpc(): CKBRPC {
     return new CKBRPC(this.ckbRpcUrl);
   }
-  private getIndexerRpc(): CKBIndexerRpc {
+
+  protected getIndexerRpc(): CKBIndexerRpc {
     return new CKBIndexerRpc(this.ckbIndexerUri);
   }
 

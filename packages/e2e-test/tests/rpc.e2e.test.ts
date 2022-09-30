@@ -1,8 +1,8 @@
 import test from "ava";
-import { RPC } from "@ckb-lumos/ckb-indexer";
-import { INDEXER_RPC_URL } from "../src/constants";
+import { BuiltinRPC } from "@ckb-lumos/ckb-indexer";
+import { BUILTIN_INDEXER_RPC_URL } from "../src/constants";
 
-const indexerRpc = new RPC(INDEXER_RPC_URL);
+const indexerRpc = new BuiltinRPC(BUILTIN_INDEXER_RPC_URL);
 
 test.before(() => {
   // @ts-ignore: Unreachable code error
